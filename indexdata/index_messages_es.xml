@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="es_project_title"><![CDATA[Museo Provincial Palacio de Junco]]></data>
+
+
+
+  <data name="es_pano1336_title"><![CDATA[IMG_20241119_105611_00_merged copia]]></data>
+  <data name="es_spotpoint2800_tooltip"><![CDATA[Ver en 3D]]></data>
+  <data name="es_spotpoint2800websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/german-clock-viewer.html]]></data>
+  <data name="es_spotpoint2800websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano465_title"><![CDATA[IMG_20241112_104228_00_merged]]></data>
+
+
+  <data name="es_pano10_title"><![CDATA[IMG_20241112_100049_00_merged]]></data>
+
+
+  <data name="es_pano11_title"><![CDATA[IMG_20241112_105949_00_merged]]></data>
+
+
+  <data name="es_pano13_title"><![CDATA[IMG_20241112_100121_00_merged]]></data>
+
+
+  <data name="es_pano14_title"><![CDATA[IMG_20241112_095837_00_merged]]></data>
+
+
+  <data name="es_pano15_title"><![CDATA[IMG_20241112_100015_00_merged]]></data>
+
+
+  <data name="es_pano45_title"><![CDATA[IMG_20241112_105908_00_merged]]></data>
+
+
+  <data name="es_pano84_title"><![CDATA[IMG_20241112_094152_00_merged]]></data>
+
+
+  <data name="es_pano85_title"><![CDATA[IMG_20241112_094327_00_merged]]></data>
+
+
+  <data name="es_pano86_title"><![CDATA[IMG_20241112_094420_00_merged]]></data>
+
+
+  <data name="es_pano87_title"><![CDATA[IMG_20241112_094513_00_merged]]></data>
+
+
+  <data name="es_pano88_title"><![CDATA[IMG_20241112_094545_00_merged]]></data>
+
+
+  <data name="es_pano89_title"><![CDATA[IMG_20241112_094634_00_merged]]></data>
+
+
+  <data name="es_pano90_title"><![CDATA[IMG_20241112_094720_00_merged]]></data>
+
+
+  <data name="es_pano91_title"><![CDATA[IMG_20241112_094858_00_merged]]></data>
+
+
+  <data name="es_pano92_title"><![CDATA[IMG_20241112_094944_00_merged]]></data>
+
+
+  <data name="es_pano93_title"><![CDATA[IMG_20241112_095032_00_merged]]></data>
+
+
+  <data name="es_pano114_title"><![CDATA[IMG_20241112_095144_00_merged]]></data>
+
+
+  <data name="es_pano118_title"><![CDATA[IMG_20241112_095104_00_merged]]></data>
+
+
+  <data name="es_pano273_title"><![CDATA[IMG_20241112_105526_00_merged]]></data>
+
+
+  <data name="es_pano274_title"><![CDATA[IMG_20241112_105550_00_merged]]></data>
+
+
+  <data name="es_pano275_title"><![CDATA[IMG_20241112_105620_00_merged]]></data>
+
+
+  <data name="es_pano276_title"><![CDATA[IMG_20241112_105644_00_merged]]></data>
+
+
+  <data name="es_pano277_title"><![CDATA[IMG_20241112_105713_00_merged]]></data>
+
+
+  <data name="es_pano278_title"><![CDATA[IMG_20241112_105836_00_merged]]></data>
+
+
+  <data name="es_pano299_title"><![CDATA[IMG_20241112_105741_00_merged]]></data>
+
+
+  <data name="es_pano462_title"><![CDATA[IMG_20241112_103919_00_merged]]></data>
+
+
+  <data name="es_pano463_title"><![CDATA[IMG_20241112_104015_00_merged]]></data>
+
+
+  <data name="es_pano464_title"><![CDATA[IMG_20241112_104142_00_merged]]></data>
+
+
+  <data name="es_pano466_title"><![CDATA[IMG_20241112_104331_00_merged]]></data>
+
+
+  <data name="es_pano467_title"><![CDATA[IMG_20241112_104403_00_merged]]></data>
+
+
+  <data name="es_pano735_title"><![CDATA[IMG_20241112_093021_00_merged]]></data>
+
+
+  <data name="es_pano736_title"><![CDATA[IMG_20241112_093109_00_merged]]></data>
+
+
+  <data name="es_pano737_title"><![CDATA[IMG_20241112_093144_00_merged]]></data>
+
+
+  <data name="es_pano738_title"><![CDATA[IMG_20241112_093244_00_merged]]></data>
+
+
+  <data name="es_pano739_title"><![CDATA[IMG_20241112_093341_00_merged]]></data>
+
+
+  <data name="es_pano740_title"><![CDATA[IMG_20241112_093427_00_merged]]></data>
+
+
+  <data name="es_pano741_title"><![CDATA[IMG_20241112_093530_00_merged]]></data>
+
+
+  <data name="es_pano742_title"><![CDATA[IMG_20241112_093642_00_merged]]></data>
+
+
+  <data name="es_pano743_title"><![CDATA[IMG_20241112_093818_00_merged]]></data>
+
+
+  <data name="es_pano744_title"><![CDATA[IMG_20241112_093919_00_merged]]></data>
+
+
+  <data name="es_pano745_title"><![CDATA[IMG_20241112_094021_00_merged]]></data>
+
+
+  <data name="es_pano746_title"><![CDATA[IMG_20241112_094227_00_merged]]></data>
+
+
+  <data name="es_pano747_title"><![CDATA[IMG_20241112_102724_00_merged(1)]]></data>
+
+
+  <data name="es_pano748_title"><![CDATA[IMG_20241112_103012_00_merged]]></data>
+
+
+  <data name="es_pano749_title"><![CDATA[IMG_20241112_103705_00_merged]]></data>
+
+
+  <data name="es_pano780_title"><![CDATA[IMG_20241112_103055_00_merged]]></data>
+
+
+  <data name="es_pano824_title"><![CDATA[IMG_20241112_094110_00_merged]]></data>
+
+
+  <data name="es_pano1214_title"><![CDATA[IMG_20241119_094020_00_merged copia]]></data>
+  <data name="es_spotpoint2799_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint2799websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint2799websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1215_title"><![CDATA[IMG_20241119_094157_00_merged copia]]></data>
+  <data name="es_spotpoint6859_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint6859websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint6859websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1216_title"><![CDATA[IMG_20250110_100739_00_merged copia]]></data>
+  <data name="es_spotpoint6332_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6334_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6335_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6860_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint6860websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint6860websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1217_title"><![CDATA[IMG_20241119_094318_00_merged copia]]></data>
+
+
+  <data name="es_pano1218_title"><![CDATA[IMG_20241119_094347_00_merged copia]]></data>
+  <data name="es_spotpoint6861_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint6861websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint6861websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1219_title"><![CDATA[IMG_20241119_094434_00_merged copia]]></data>
+  <data name="es_spotpoint6333_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6344_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6345_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6346_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6347_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6348_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6349_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6350_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6862_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint6862websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint6862websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1220_title"><![CDATA[IMG_20241119_094518_00_merged copia]]></data>
+  <data name="es_spotpoint6359_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6863_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint6863websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint6863websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1221_title"><![CDATA[IMG_20250110_100520_00_merged copia]]></data>
+  <data name="es_spotpoint6360_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6361_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6362_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6363_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6364_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6365_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6366_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6630_tooltip"><![CDATA[INFO]]></data>
+  <data name="es_spotpoint6631_tooltip"><![CDATA[INFO]]></data>
+  <data name="es_spotpoint6632_tooltip"><![CDATA[INFO]]></data>
+  <data name="es_spotpoint6633_tooltip"><![CDATA[INFO]]></data>
+  <data name="es_spotpoint6634_tooltip"><![CDATA[INFO]]></data>
+  <data name="es_spotpoint6635_tooltip"><![CDATA[INFO]]></data>
+  <data name="es_spotpoint6864_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint6864websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint6864websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1222_title"><![CDATA[IMG_20241119_094703_00_merged copia]]></data>
+  <data name="es_spotpoint4997_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6331_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint6858_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint6858websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/escudo de armas-viewer.html]]></data>
+  <data name="es_spotpoint6858websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1223_title"><![CDATA[IMG_20241119_094907_00_merged copia]]></data>
+  <data name="es_spotpoint6629_tooltip"><![CDATA[INFO]]></data>
+
+
+  <data name="es_pano1331_title"><![CDATA[IMG_20241119_105152_00_merged copia]]></data>
+  <data name="es_spotpoint4825_tooltip"><![CDATA[Ver Relojes de Pared]]></data>
+  <data name="es_spotpoint7188_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint7188websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/german-clock-viewer.html]]></data>
+  <data name="es_spotpoint7188websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1332_title"><![CDATA[IMG_20241119_105237_00_merged copia]]></data>
+  <data name="es_spotpoint7189_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint7189websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/german-clock-viewer.html]]></data>
+  <data name="es_spotpoint7189websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1333_title"><![CDATA[IMG_20241119_105331_00_merged copia]]></data>
+  <data name="es_spotpoint7190_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint7190websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/german-clock-viewer.html]]></data>
+  <data name="es_spotpoint7190websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1334_title"><![CDATA[IMG_20241119_105422_00_merged copia]]></data>
+  <data name="es_spotpoint7191_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint7191websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/german-clock-viewer.html]]></data>
+  <data name="es_spotpoint7191websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1335_title"><![CDATA[IMG_20241119_105457_00_merged copia]]></data>
+  <data name="es_spotpoint2442_tooltip"><![CDATA[Ver Relojes de Pared]]></data>
+  <data name="es_spotpoint7192_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint7192websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/german-clock-viewer.html]]></data>
+  <data name="es_spotpoint7192websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1337_title"><![CDATA[IMG_20241119_105655_00_merged copia]]></data>
+  <data name="es_spotpoint7187_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint7187websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/german-clock-viewer.html]]></data>
+  <data name="es_spotpoint7187websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano1339_title"><![CDATA[IMG_20241119_105852_00_merged copia]]></data>
+
+
+  <data name="es_pano2541_title"><![CDATA[IMG_20241119_105031_00_merged copia]]></data>
+  <data name="es_spotpoint9821_tooltip"><![CDATA[Ver Relojes de Pared]]></data>
+
+
+  <data name="es_pano2542_title"><![CDATA[IMG_20241119_105109_00_merged copia]]></data>
+
+
+  <data name="es_pano2543_title"><![CDATA[IMG_20250110_104518_00_merged copia]]></data>
+
+
+  <data name="es_pano2544_title"><![CDATA[IMG_20241119_103521_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7369_title"><![CDATA[IMG_20241119_095320_00_merged-DeNoiseAI-low-light]]></data>
+  <data name="es_spotpoint9346_tooltip"><![CDATA[Ver INFO]]></data>
+
+
+  <data name="es_pano7370_title"><![CDATA[IMG_20241119_095414_00_merged-DeNoiseAI-low-light]]></data>
+  <data name="es_spotpoint9347_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9348_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9349_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9350_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9351_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9352_tooltip"><![CDATA[Ver INFO]]></data>
+
+
+  <data name="es_pano7371_title"><![CDATA[IMG_20241119_095505_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7372_title"><![CDATA[IMG_20241119_095548_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7373_title"><![CDATA[IMG_20241119_095645_00_merged-DeNoiseAI-low-light]]></data>
+  <data name="es_spotpoint9353_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9354_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9355_tooltip"><![CDATA[Ver INFO]]></data>
+
+
+  <data name="es_pano7374_title"><![CDATA[IMG_20241119_095743_00_merged-DeNoiseAI-low-light]]></data>
+  <data name="es_spotpoint9356_tooltip"><![CDATA[Ver INFO]]></data>
+  <data name="es_spotpoint9357_tooltip"><![CDATA[Ver INFO]]></data>
+
+
+  <data name="es_pano7375_title"><![CDATA[IMG_20241119_095838_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7376_title"><![CDATA[IMG_20241119_100009_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7377_title"><![CDATA[IMG_20241119_100053_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7378_title"><![CDATA[IMG_20241119_100134_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7379_title"><![CDATA[IMG_20241119_100218_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7380_title"><![CDATA[IMG_20241119_100307_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7381_title"><![CDATA[IMG_20241119_100352_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7382_title"><![CDATA[IMG_20241119_100802_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano7956_title"><![CDATA[IMG_20241119_100934_00_merged]]></data>
+
+
+  <data name="es_pano7957_title"><![CDATA[IMG_20241119_101040_00_merged]]></data>
+
+
+  <data name="es_pano7958_title"><![CDATA[IMG_20241119_101134_00_merged]]></data>
+
+
+  <data name="es_pano7959_title"><![CDATA[IMG_20241119_101233_00_merged]]></data>
+
+
+  <data name="es_pano7960_title"><![CDATA[IMG_20241119_101327_00_merged]]></data>
+
+
+  <data name="es_pano7961_title"><![CDATA[IMG_20241119_101425_00_merged]]></data>
+
+
+  <data name="es_pano7962_title"><![CDATA[IMG_20241119_101506_00_merged]]></data>
+
+
+  <data name="es_pano7963_title"><![CDATA[IMG_20241119_101546_00_merged]]></data>
+
+
+  <data name="es_pano7964_title"><![CDATA[IMG_20241119_101631_00_merged]]></data>
+
+
+  <data name="es_pano8194_title"><![CDATA[IMG_20241119_101730_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8195_title"><![CDATA[IMG_20241119_101840_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8196_title"><![CDATA[IMG_20241119_102005_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8197_title"><![CDATA[IMG_20241119_102110_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8198_title"><![CDATA[IMG_20241119_102312_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8199_title"><![CDATA[IMG_20241119_102347_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8200_title"><![CDATA[IMG_20241119_102539_00_merged-DeNoiseAI-low-light]]></data>
+  <data name="es_spotpoint9822_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint9822websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/canon-viewer.html]]></data>
+  <data name="es_spotpoint9822websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano8407_title"><![CDATA[IMG_20241119_102827_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8408_title"><![CDATA[IMG_20241119_103029_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8409_title"><![CDATA[IMG_20241119_103251_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8410_title"><![CDATA[IMG_20241119_103352_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8411_title"><![CDATA[IMG_20241119_103622_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8412_title"><![CDATA[IMG_20241119_103824_00_merged-DeNoiseAI-low-light]]></data>
+  <data name="es_spotpoint9819_tooltip"><![CDATA[Ver objeto 3D]]></data>
+  <data name="es_spotpoint9819websiteViewer|websiteViewer|displaywebsitewebsite_url"><![CDATA[./indexdata/extras/adorno-viewer.html]]></data>
+  <data name="es_spotpoint9819websiteViewer|websiteViewer|displaywebsitewebsite_title"><![CDATA[Ver en 3D]]></data>
+
+
+  <data name="es_pano8413_title"><![CDATA[IMG_20241119_104256_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8414_title"><![CDATA[IMG_20241119_104453_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8874_title"><![CDATA[IMG_20250129_143330_00_merged-DeNoiseAI-low-light]]></data>
+
+
+  <data name="es_pano8875_title"><![CDATA[IMG_20250129_143420_00_merged-DeNoiseAI-low-light]]></data>
+
+
+	<data name="es_spotmap10225_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10226_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10227_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10228_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10229_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10230_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10231_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10232_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10233_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10234_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10235_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10236_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10237_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10238_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10239_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10240_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10241_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10242_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10243_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10244_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10245_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10246_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10247_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10248_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10249_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10250_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10251_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10252_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10253_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10254_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10255_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10256_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10257_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10258_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10259_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10260_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10261_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10262_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10263_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10264_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10265_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10266_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10267_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10268_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10269_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10270_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10271_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10272_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10273_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10274_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10275_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10276_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10277_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10278_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10279_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10280_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10281_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10282_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10283_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10284_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10285_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10286_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10287_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10288_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10289_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10290_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10291_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10292_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10293_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10294_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10295_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10296_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10297_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10298_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10299_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10300_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10301_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10302_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10303_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10304_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10305_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10306_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10307_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10308_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10309_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10310_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10311_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10312_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10313_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10314_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10315_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10316_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10317_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10318_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10319_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10320_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10321_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10322_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10323_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10324_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10325_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10326_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10327_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10328_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10329_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10330_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10331_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10332_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10333_tooltip"><![CDATA[]]></data>
+	<data name="es_spotmap10334_tooltip"><![CDATA[]]></data>
+
+
+
+
+  <data name="es_gallery1navprev_text"><![CDATA[Anterior]]></data>
+  <data name="es_gallery1navnext_text"><![CDATA[Siguiente]]></data>
+  <data name="es_gallery1close_text"><![CDATA[Cerrar]]></data>
+  <data name="es_gallerypicture_title4"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallerypicture_caption4"><![CDATA[]]></data>
+  <data name="es_gallery1picture_title1"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallery1picture_caption1"><![CDATA[]]></data>
+  <data name="es_gallery1picture_title2"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallery1picture_caption2"><![CDATA[]]></data>
+  <data name="es_gallery1picture_title3"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallery1picture_caption3"><![CDATA[]]></data>
+  <data name="es_gallery1picture_title4"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallery1picture_caption4"><![CDATA[]]></data>
+  <data name="es_gallery1picture_title5"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallery1picture_caption5"><![CDATA[]]></data>
+  <data name="es_gallery1picture_title6"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallery1picture_caption6"><![CDATA[]]></data>
+  <data name="es_gallerynavprev_text"><![CDATA[Anterior]]></data>
+  <data name="es_gallerynavnext_text"><![CDATA[Siguiente]]></data>
+  <data name="es_galleryclose_text"><![CDATA[Cerrar]]></data>
+  <data name="es_gallerypicture_title0"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallerypicture_caption0"><![CDATA[]]></data>
+  <data name="es_gallerypicture_title1"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallerypicture_caption1"><![CDATA[]]></data>
+  <data name="es_gallerypicture_title2"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallerypicture_caption2"><![CDATA[]]></data>
+  <data name="es_gallerypicture_title3"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallerypicture_caption3"><![CDATA[]]></data>
+  <data name="es_gallerypicture_title4"><![CDATA[Reloj de pared (USA)]]></data>
+  <data name="es_gallerypicture_caption4"><![CDATA[]]></data>
+  <data name="es_websiteViewerclose_text"><![CDATA[Cerrar]]></data>
+  <data name="es_descriptiondescription_title"><![CDATA[INFO]]></data>
+  <data name="es_descriptiondisplay_close_text"><![CDATA[Cerrar]]></data>
+  <data name="es_callActionsOnTourEvents1panoid1020"><![CDATA[pano2542]]></data>
+
+
+  <data name="es_vr_setup_hmd0"><![CDATA[SELECCIONE SU HMD]]></data>
+  <data name="es_vr_setup_advanced"><![CDATA[CONFIGURACIÓN AVANZADA]]></data>
+  <data name="es_vr_setup_title"><![CDATA[CONFIGURACIÓN WEB VR]]></data>
+  <data name="es_vr_setup_dvn1"><![CDATA[Dispositivo:]]></data>
+  <data name="es_vr_setup_siz1"><![CDATA[Tamaño de pantalla:]]></data>
+  <data name="es_vr_setup_ipd1"><![CDATA[IPD:]]></data>
+  <data name="es_vr_setup_hmd1"><![CDATA[HMD:]]></data>
+  <data name="es_vr_setup_hmd3"><![CDATA[Personalizar]]></data>
+  <data name="es_vr_setup_cal"><![CDATA[Calibrar el giroscopio]]></data>
+  <data name="es_vr_setup_sav"><![CDATA[GUARDAR]]></data>
+  <data name="es_vr_setup_rst"><![CDATA[REINICIO]]></data>
+  <data name="es_vr_setup_simple"><![CDATA[SIMPLE]]></data>
+  <data name="es_vr_setup_cls"><![CDATA[CERRAR]]></data>
+  <data name="es_vr_setup_m31"><![CDATA[CONFIGURACIÓN HMD]]></data>
+  <data name="es_vr_setup_fov1"><![CDATA[FOV:]]></data>
+  <data name="es_vr_setup_dst1"><![CDATA[Distorsión:]]></data>
+  <data name="es_vr_setup_d2tx"><![CDATA[Distorsión 2:]]></data>
+  <data name="es_vr_setup_vig1"><![CDATA[Viñeteado:]]></data>
+  <data name="es_vr_setup_cac1"><![CDATA[Aberración cromática:]]></data>
+  <data name="es_vr_setup_olp1"><![CDATA[Superposición:]]></data>
+  <data name="es_vr_setup_m35"><![CDATA[RETORNO]]></data>
+  <data name="es_vr_setup_cb1"><![CDATA[GIROSCOPIO]]></data>
+  <data name="es_vr_setup_cb2"><![CDATA[Coloque el dispositivo sobre una superficie plana y [br ] y estable y pulse CALIBRAR[br] para corregir la deriva del giroscopio.]]></data>
+  <data name="es_vr_setup_cb3"><![CDATA[CALIBRAR]]></data>
+  <data name="es_vr_setup_cb4"><![CDATA[REINICIO]]></data>
+  <data name="es_vr_setup_cb5"><![CDATA[RETORNO]]></data>
+  <data name="es_vr_setup_cb6"><![CDATA[Calibrando...]]></data>
+  <data name="es_vr_setup_cb7"><![CDATA[Calibración exitosa]]></data>
+  <data name="es_vr_setup_cb8"><![CDATA[Calibración fracasada]]></data>
+  <data name="es_vr_setup_unavailable"><![CDATA[El modo VR no está disponible en tu dispositivo]]></data>
+
+
+  <data name="es_project_description"><![CDATA[<font face="verdana, sans-serif">Construido en 1838 fue la morada de la familia Vicente del Junco y Sardiñas, convertida en museo provincial en 1980.</font>]]></data>
+
+
+  <data name="es_pano1336_description"><![CDATA[<span style="font-family: verdana, sans-serif;">Construido en 1838 fue la morada de la familiadel acaudalado Vicente del Junco y Sardiñas, dueño de grandes extensiones de tierra e ingenios azucareros. Parte de su familia vivió en el inmueble hasta principios de la década de 1970, fecha en que pasa a los fondos inmobiliarios del estado cubano, y que luego de algunos años de restauración, en 1980 abrió sus puertas como museo provincial. Más de una decena de salas de exposición, dispuestas en orden cronológico narran los principales acontecimientos históricos de la provincia.</span>]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <data name="es_spotpoint6332_description"><![CDATA[<font face="verdana, sans-serif">Copia del plano elaborado por el ingeniero militar Juan de Herrera y Sotomayor en 1693 durante el proceso de fundación de la ciudad de San Carlos y San Severino de Matanzas</font>]]></data>
+  <data name="es_spotpoint6334_description"><![CDATA[<font face="verdana, sans-serif">Escudo de la provincia, aprobado por el Ayuntamiento de Matanzas. Octubre de 1917</font>]]></data>
+  <data name="es_spotpoint6335_description"><![CDATA[<font face="verdana, sans-serif">Primer escudo de la ciudad, concedido por Fernando VII. 1828</font>]]></data>
+
+
+
+
+
+
+
+
+
+  <data name="es_spotpoint6333_description"><![CDATA[<p><font face="verdana, sans-serif">Copas de votación del antiguo ayuntamiento de matanzas en el siglo XIX</font></p><p><o:p></o:p></p>]]></data>
+  <data name="es_spotpoint6344_description"><![CDATA[<font face="verdana, sans-serif">Puente sobre el Río Yumuri. Grabado de Federico Mialhe</font>]]></data>
+  <data name="es_spotpoint6345_description"><![CDATA[<div><font face="verdana, sans-serif">Puente de la Concordia. Fotografía</font></div><div><font face="verdana, sans-serif">Década 1880</font></div>]]></data>
+  <data name="es_spotpoint6346_description"><![CDATA[<font face="verdana, sans-serif">Puente de la Carnicería. Grabado de Federico Mialhe 1838</font>]]></data>
+  <data name="es_spotpoint6347_description"><![CDATA[<div><font face="verdana, sans-serif">Piezas vinculadas a la Catedral de Matanzas</font></div><div><font face="verdana, sans-serif">1. &nbsp; &nbsp;Cáliz de plata</font></div><div><font face="verdana, sans-serif">2. &nbsp; &nbsp;Cállz de plata dorada</font></div><div><font face="verdana, sans-serif">3. &nbsp; &nbsp;Anillo de esmeralda</font></div><div><font face="verdana, sans-serif">4. &nbsp; &nbsp;Llaves</font></div>]]></data>
+  <data name="es_spotpoint6348_description"><![CDATA[<div><font face="verdana, sans-serif">Antiguos almacenes, calle Milanés y Ayllón.</font></div><div><font face="verdana, sans-serif">Fotografía. Década 1880</font></div>]]></data>
+  <data name="es_spotpoint6349_description"><![CDATA[<font face="verdana, sans-serif">Plaza de la Vigía. Fotografía. Década 1880</font>]]></data>
+  <data name="es_spotpoint6350_description"><![CDATA[<font face="verdana, sans-serif">Plaza de Armas. Fotografía. Década 1880</font>]]></data>
+
+
+
+  <data name="es_spotpoint6359_description"><![CDATA[<div><font face="verdana, sans-serif">Barreta utilizada por el asiático Justo Wong mientras trabajaba en las canteras de Don&nbsp;</font><span style="font-family: verdana, sans-serif;">Manuel Santos Parga</span></div><div><br></div>]]></data>
+
+
+
+  <data name="es_spotpoint6360_description"><![CDATA[<font face="verdana, sans-serif">El día 17 de Abril de 1861, durante las excavaciones que se realizaban en las canteras de Don Manuel Santos Parga fueron descubiertas las Cuevas de Bellamar, su Insospechada belleza habría de convertir a Matanzas en la meca del turismo americano. Las mismas constituyen el centro turístico más antiguo de Iberoamérica</font>]]></data>
+  <data name="es_spotpoint6361_description"><![CDATA[<font face="verdana, sans-serif">Es Inaugurada por los catalanes la Ermita de Monserrate. 8 de diclembre de 1875</font>]]></data>
+  <data name="es_spotpoint6362_description"><![CDATA[<font face="verdana, sans-serif">Línea de nivel, 1.70 m, altura aproximada donde llegaron las aguas en la Calzada de Tirry durante el ciclón de 1870</font>]]></data>
+  <data name="es_spotpoint6363_description"><![CDATA[<font face="verdana, sans-serif">Exvotos depositados en la Ermita de Monserrate por los feligreses</font>]]></data>
+  <data name="es_spotpoint6364_description"><![CDATA[<font face="verdana, sans-serif">Bacinilla infantil. Loza, finales siglo XIX</font>]]></data>
+  <data name="es_spotpoint6365_description"><![CDATA[<font face="verdana, sans-serif">Medallas Conmemorativas de la Inauguración del Acueducto Burriel. 16 de Mayo 1872</font>]]></data>
+  <data name="es_spotpoint6366_description"><![CDATA[<font face="verdana, sans-serif">Medallas Conmemorativas y de premios de la Exposición Internacional de Matanzas. 1881</font>]]></data>
+  <data name="es_spotpoint6630_description"><![CDATA[<font face="verdana, sans-serif">Recuerdo de la construcción del edificio de Monserrate</font>]]></data>
+  <data name="es_spotpoint6631_description"><![CDATA[<font face="verdana, sans-serif">Copia del plano de la Feria Exposición de 1872</font>]]></data>
+  <data name="es_spotpoint6632_description"><![CDATA[<font face="verdana, sans-serif">Vista general de la Exposición de 1881</font>]]></data>
+  <data name="es_spotpoint6633_description"><![CDATA[<div><font face="verdana, sans-serif">Principales acontecimientos ocurridos en los terrenos del Palmar de Junco:</font></div><div><font face="verdana, sans-serif">* 1865, 5 de septiembre. Juego de pelota entre el equipo del comercio y la tripulación de un barco norteamericano.</font></div><div><font face="verdana, sans-serif">* 1872, 1-3 de febrero. Primera Exposición organizada por los canarios residentes en la jurisdicción</font></div><div><font face="verdana, sans-serif">* 1874, 27 de diciembre. Se efectúa el Primer Juego Oficial de Pelota entre los equipos Base Ball Club de la Habana y Matanzas</font></div><div><font face="verdana, sans-serif">* 1881, 3 de abril. Exposición Internacional, alentada por el Ateneo de Matanzas, con la participación de 12 países</font></div><div><font face="verdana, sans-serif">* 1898_1899. Utilizados los terrenos para aislar a los enfermos durante la Reconcentración de Wevler</font></div>]]></data>
+  <data name="es_spotpoint6634_description"><![CDATA[<font face="verdana, sans-serif">Equipo Matanzas, ganador del primer gallardete para la provincia yumurina en la temporada 1892-93</font>]]></data>
+  <data name="es_spotpoint6635_description"><![CDATA[<div><font face="verdana, sans-serif">Barreta utilizada por el asiático Justo Wong mientras trabajaba en las canteras de Don&nbsp;</font><span style="font-family: verdana, sans-serif;">Manuel Santos Parga</span></div>]]></data>
+
+
+
+  <data name="es_spotpoint4997_description"><![CDATA[<font face="verdana, sans-serif">Mapa de la Isla de Cuba del viajero Italiano Gerónimo Buzoni donde señala "Portus Matancas". 1541</font>]]></data>
+  <data name="es_spotpoint6331_description"><![CDATA[<div><font face="verdana, sans-serif">Mosquetes ingleses de chispa. Marca Tower.</font></div><div><font face="verdana, sans-serif">Calibre 76</font></div><div><font face="verdana, sans-serif">Pistolas de chispa. Calibre 70</font></div>]]></data>
+
+
+
+  <data name="es_spotpoint6629_description"><![CDATA[<font face="verdana, sans-serif">Escudo de armas, grabado en pieza de canto. Concedido por el Rey Felipe V a Garcia Amoedo por sus servicios a la iglesia. 1730</font>]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <data name="es_spotpoint9346_description"><![CDATA[<font face="verdana, sans-serif">HUMIDOR</font>]]></data>
+
+
+
+  <data name="es_spotpoint9347_description"><![CDATA[<font face="verdana, sans-serif">HUMIDOR</font>]]></data>
+  <data name="es_spotpoint9348_description"><![CDATA[<font face="verdana, sans-serif">CAMPANA DE CAFETAL</font>]]></data>
+  <data name="es_spotpoint9349_description"><![CDATA[<font face="verdana, sans-serif">MOLINILLO DE CAFÉ</font>]]></data>
+  <data name="es_spotpoint9350_description"><![CDATA[<font face="verdana, sans-serif">VEGA DE TABACO</font>]]></data>
+  <data name="es_spotpoint9351_description"><![CDATA[<font face="verdana, sans-serif">TIJERA DE DESPUNTAR TABACO</font>]]></data>
+  <data name="es_spotpoint9352_description"><![CDATA[<font face="verdana, sans-serif">ANILLAS Y BOFETONES</font>]]></data>
+
+
+
+
+
+
+
+
+
+  <data name="es_spotpoint9353_description"><![CDATA[<font face="verdana, sans-serif">Talla de indios en madera.</font>]]></data>
+  <data name="es_spotpoint9354_description"><![CDATA[<font face="verdana, sans-serif">Talla de indios en madera.</font>]]></data>
+  <data name="es_spotpoint9355_description"><![CDATA[<font face="verdana, sans-serif">PILÓN Y MAJADOR</font>]]></data>
+
+
+
+  <data name="es_spotpoint9356_description"><![CDATA[<div><font face="verdana, sans-serif">CASA DE CALDERAS INGENIO LA PONINA.</font></div><div><font face="verdana, sans-serif">GRABADO DE EDUARDO LAPLANTE</font></div><div><br></div>]]></data>
+  <data name="es_spotpoint9357_description"><![CDATA[<div><font face="verdana, sans-serif">INGENIO TINGUARO.</font></div><div><font face="verdana, sans-serif">GRABADO DE EDUARDO LAPLANTE</font></div>]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>
