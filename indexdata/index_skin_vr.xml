@@ -5018,6 +5018,43 @@
 
 
 
+    
+  <!-- Spot Style - Default Point Objeto 3D Escudo 1 -->
+
+
+  <style name="IconDefaultPointObjeto3DEscudo1"
+         url="%FIRSTXML%/spots/hotspot_3d_sequence_user_defaultpoint13.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="50"
+         frameheight="50"
+         stopspotsequence="false"
+         crop="0|0|50|50"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconDefaultPointObjeto3DEscudo1"
+         onout="onoutIconDefaultPointObjeto3DEscudo1"
+
+
+         />
+  <action name="onhoverIconDefaultPointObjeto3DEscudo1">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconDefaultPointObjeto3DEscudo1">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+  <!-- Tour Information -->
+  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
+  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
+
+
 <action name="setViewArchitectural">
 	if(normalViewActivated,stopSetViewTweens(););
 	if(current_view_isflat === true,
@@ -5515,10 +5552,5 @@
       );
     );
   </action>
-
-  <!-- Tour Information -->
-  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
-  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
-
 
 </krpano>
