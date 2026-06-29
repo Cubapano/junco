@@ -353,6 +353,132 @@
 				}, 300);
 			});
 		</script>
+		
+		<!-- ===== CAMBIO 5: Forzar splash en Safari al cambiar a landscape (VERSIÓN FINAL) ===== -->
+		<script type="text/javascript">
+			// Detectar Safari en iOS
+			function isSafari() {
+				return /iphone|ipad|ipod/i.test(navigator.userAgent.toLowerCase()) && 
+					   /safari/i.test(navigator.userAgent.toLowerCase()) &&
+					   !/crios/i.test(navigator.userAgent.toLowerCase()) &&
+					   !/fxios/i.test(navigator.userAgent.toLowerCase());
+			}
+
+			// Función para forzar la visibilidad del splash y hotspots en Safari
+			function forceSplashVisibility() {
+				if (!isSafari()) return;
+				
+				// Obtener el objeto Krpano
+				var krpano = document.getElementById('krpanoSWFObject');
+				if (!krpano) {
+					console.log('Krpano no encontrado, reintentando...');
+					setTimeout(forceSplashVisibility, 300);
+					return;
+				}
+				
+				console.log('Forzando visibilidad del splash en Safari');
+				
+				// 1. Forzar la ejecución del onstart
+				try {
+					if (krpano.call) {
+						krpano.call('startup');
+						krpano.call('skipintroaction');
+					}
+				} catch(e) {
+					console.log('No se pudo ejecutar startup:', e);
+				}
+				
+				// 2. Forzar la visibilidad de los hotspots
+				try {
+					if (krpano.set) {
+						// Variable global de Panotour
+						krpano.set('tour_displayspots', true);
+						
+						// Intentar con diferentes nombres de plugin de introducción
+						var pluginNames = ['intro', 'splash', 'intro_splash', 'ui_intro', 'intro_plugin', 'splash_plugin'];
+						pluginNames.forEach(function(name) {
+							try {
+								krpano.set('plugin[' + name + '].visible', true);
+								krpano.set('plugin[' + name + '].enabled', true);
+							} catch(e) {}
+						});
+						
+						// Acciones de Panotour para mostrar spots
+						krpano.call('showpanopointspots');
+						krpano.call('showpanospotsaction');
+						
+						// Si hay un plugin de descripción visible, forzarlo
+						krpano.call('showDescription_description');
+						krpano.call('showDescription_description1');
+						krpano.call('showDescription_description2');
+						krpano.call('showDescription_description3');
+					}
+				} catch(e) {
+					console.log('No se pudieron forzar hotspots:', e);
+				}
+				
+				// 3. Forzar redimensionamiento
+				try {
+					if (krpano.stagewidth) {
+						krpano.set('stagewidth', window.innerWidth);
+						krpano.set('stageheight', window.innerHeight);
+					}
+					if (krpano.events && krpano.events.onresize) {
+						krpano.events.onresize();
+					}
+				} catch(e) {
+					console.log('Error en redimensionamiento:', e);
+				}
+				
+				console.log('Splash y hotspots forzados en Safari');
+			}
+
+			// Detectar cambio a landscape en Safari
+			function checkOrientationForSafari() {
+				if (!isSafari()) return;
+				
+				var isLandscape = window.innerWidth > window.innerHeight;
+				var wasPortrait = window._wasPortrait;
+				
+				// Si estaba en portrait y ahora está en landscape, forzar splash
+				if (wasPortrait && isLandscape) {
+					console.log('Detectado cambio de portrait a landscape en Safari');
+					// Múltiples reintentos con diferentes tiempos
+					setTimeout(forceSplashVisibility, 300);
+					setTimeout(forceSplashVisibility, 600);
+					setTimeout(forceSplashVisibility, 1000);
+					setTimeout(forceSplashVisibility, 1500);
+				}
+				
+				window._wasPortrait = !isLandscape;
+			}
+
+			// Estado inicial
+			if (isSafari()) {
+				window._wasPortrait = window.innerWidth < window.innerHeight;
+				console.log('Safari detectado, estado inicial: portrait=' + window._wasPortrait);
+				
+				// Escuchar cambios de orientación
+				window.addEventListener('orientationchange', function() {
+					setTimeout(checkOrientationForSafari, 400);
+				});
+				
+				// También escuchar resize
+				window.addEventListener('resize', function() {
+					setTimeout(checkOrientationForSafari, 300);
+				});
+				
+				// Ejecutar al cargar
+				setTimeout(checkOrientationForSafari, 100);
+				setTimeout(checkOrientationForSafari, 500);
+				
+				// Si el usuario está en portrait al cargar y luego cambia a landscape
+				// esto asegura que se ejecute incluso si el evento no se dispara
+				setInterval(function() {
+					checkOrientationForSafari();
+				}, 2000);
+			}
+		</script>
 	</head>
 	<body>
 		<!-- ===== CAMBIO 4: Mensaje de rotación ===== -->
