@@ -99,6 +99,27 @@
 			height: -webkit-fill-available;
 		}
 	}
+	
+	/* ===== CAMBIO 1.3: Ocultar barra inferior de Safari en landscape ===== */
+	@media screen and (orientation: landscape) and (max-width: 768px) {
+		body {
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		#container {
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
 </style>
 
 		<!--[if !IE]><!-->
@@ -139,10 +160,37 @@
 				forceLandscape();
 				window.addEventListener('orientationchange', function() {
 					setTimeout(forceLandscape, 300);
+					// ===== CAMBIO 2.1: Forzar redimensionamiento de Krpano =====
+					setTimeout(function() {
+						resizeKrpano();
+					}, 500);
 				});
 				window.addEventListener('resize', function() {
 					setTimeout(forceLandscape, 300);
+					// ===== CAMBIO 2.1: Forzar redimensionamiento de Krpano =====
+					setTimeout(function() {
+						resizeKrpano();
+					}, 500);
 				});
+			}
+			
+			// ===== CAMBIO 2.2: Función para redimensionar Krpano =====
+			function resizeKrpano() {
+				var krpano = document.getElementById('krpanoSWFObject');
+				if (krpano && krpano.set) {
+					// Forzar recálculo del viewport
+					krpano.set('view.hlookat', krpano.get('view.hlookat'));
+					// Disparar evento de redimensionamiento
+					if (krpano.events && krpano.events.onresize) {
+						krpano.events.onresize();
+					}
+					// Forzar actualización del stage
+					if (krpano.stagewidth) {
+						krpano.set('stagewidth', window.innerWidth);
+						krpano.set('stageheight', window.innerHeight);
+					}
+					console.log('Krpano redimensionado');
+				}
 			}
 		</script>
 
@@ -289,10 +337,19 @@
 				}
 			}, { once: true });
 			
-			// Al cambiar de orientación, reajustar scroll
+			// Al cambiar de orientación, reajustar scroll y redimensionar Krpano
 			window.addEventListener('orientationchange', function() {
 				setTimeout(function() {
 					window.scrollTo(0, 0);
+					// ===== CAMBIO 3.1: Redimensionar Krpano al cambiar orientación =====
+					resizeKrpano();
+				}, 500);
+			});
+			
+			// ===== CAMBIO 3.2: También al redimensionar la ventana =====
+			window.addEventListener('resize', function() {
+				setTimeout(function() {
+					resizeKrpano();
 				}, 300);
 			});
 		</script>
