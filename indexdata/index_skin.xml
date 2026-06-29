@@ -8569,26 +8569,6 @@ playsound3Dwhenpossible(soundcallActionsOnTourEvents1, %$videos_sounds_path%/sou
   <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
 
 
-<action name="setViewArchitectural">
-	if(normalViewActivated,stopSetViewTweens(););
-	if(current_view_isflat === true,
-		setViewNonFlat(VFOV);
-	);
-	setViewArchitecturalComplete();
-</action>
-
-<action name="setViewArchitecturalComplete">
-	set(view.fovmax, get(panoview.fovmax));
-	set(view.fisheyefovlink, 0.5);
-	tween(view.architectural, 1.0, distance(1.0, 0.45));
-	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
-	tween(view.fisheye, 0.0, distance(1.0, 0.45), easeOutQuad, 
-		set(view.stereographic,false);
-		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
-	);
-	tween(view.fov, get(panoview.fov), distance(50, 0.45));
-</action>
-
   <!-- Sounds Management -->
   <plugin name="soundinterface"
           preload="true"
@@ -9066,5 +9046,25 @@ playsound3Dwhenpossible(soundcallActionsOnTourEvents1, %$videos_sounds_path%/sou
       );
     );
   </action>
+
+<action name="setViewArchitectural">
+	if(normalViewActivated,stopSetViewTweens(););
+	if(current_view_isflat === true,
+		setViewNonFlat(VFOV);
+	);
+	setViewArchitecturalComplete();
+</action>
+
+<action name="setViewArchitecturalComplete">
+	set(view.fovmax, get(panoview.fovmax));
+	set(view.fisheyefovlink, 0.5);
+	tween(view.architectural, 1.0, distance(1.0, 0.45));
+	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	tween(view.fisheye, 0.0, distance(1.0, 0.45), easeOutQuad, 
+		set(view.stereographic,false);
+		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+	);
+	tween(view.fov, get(panoview.fov), distance(50, 0.45));
+</action>
 
 </krpano>
