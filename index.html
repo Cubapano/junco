@@ -160,37 +160,10 @@
 				forceLandscape();
 				window.addEventListener('orientationchange', function() {
 					setTimeout(forceLandscape, 300);
-					// ===== CAMBIO 2.1: Forzar redimensionamiento de Krpano =====
-					setTimeout(function() {
-						resizeKrpano();
-					}, 500);
 				});
 				window.addEventListener('resize', function() {
 					setTimeout(forceLandscape, 300);
-					// ===== CAMBIO 2.1: Forzar redimensionamiento de Krpano =====
-					setTimeout(function() {
-						resizeKrpano();
-					}, 500);
 				});
-			}
-			
-			// ===== CAMBIO 2.2: Función para redimensionar Krpano =====
-			function resizeKrpano() {
-				var krpano = document.getElementById('krpanoSWFObject');
-				if (krpano && krpano.set) {
-					// Forzar recálculo del viewport
-					krpano.set('view.hlookat', krpano.get('view.hlookat'));
-					// Disparar evento de redimensionamiento
-					if (krpano.events && krpano.events.onresize) {
-						krpano.events.onresize();
-					}
-					// Forzar actualización del stage
-					if (krpano.stagewidth) {
-						krpano.set('stagewidth', window.innerWidth);
-						krpano.set('stageheight', window.innerHeight);
-					}
-					console.log('Krpano redimensionado');
-				}
 			}
 		</script>
 
@@ -337,70 +310,46 @@
 				}
 			}, { once: true });
 			
-			// Al cambiar de orientación, reajustar scroll y redimensionar Krpano
+			// Al cambiar de orientación, reajustar scroll
 			window.addEventListener('orientationchange', function() {
 				setTimeout(function() {
 					window.scrollTo(0, 0);
-					// ===== CAMBIO 3.1: Redimensionar Krpano al cambiar orientación =====
-					resizeKrpano();
-				}, 500);
-			});
-			
-			// ===== CAMBIO 3.2: También al redimensionar la ventana =====
-			window.addEventListener('resize', function() {
-				setTimeout(function() {
-					resizeKrpano();
 				}, 300);
 			});
 		</script>
 		
-		<!-- ===== CAMBIO 5: Forzar splash en Safari al cambiar a landscape (VERSIÓN CORREGIDA) ===== -->
+		<!-- ===== CAMBIO 5: Solución definitiva - Forzar visibilidad sin reiniciar ===== -->
 		<script type="text/javascript">
-			// Detectar Safari en iOS (EXCLUYENDO Firefox)
-			function isSafari() {
-				var ua = navigator.userAgent.toLowerCase();
-				// Debe ser iOS Y Safari Y NO Firefox
-				return /iphone|ipad|ipod/i.test(ua) && 
-					   /safari/i.test(ua) &&
-					   !/crios/i.test(ua) &&      // Chrome en iOS
-					   !/fxios/i.test(ua) &&      // Firefox en iOS
-					   !/firefox/i.test(ua);      // Firefox en general
+			// Detectar si es un navegador en móvil (iOS o Android)
+			function isMobileBrowser() {
+				return /iphone|ipad|ipod|android|iemobile|mobile/i.test(navigator.userAgent.toLowerCase());
 			}
 
 			// Variable para controlar que solo se ejecute una vez
-			var splashForced = false;
+			var visibilityForced = false;
 
-			// Función para forzar la visibilidad del splash y hotspots en Safari
-			function forceSplashVisibility() {
-				// Solo ejecutar una vez
-				if (splashForced) {
-					console.log('Splash ya forzado, omitiendo');
-					return;
-				}
+			// Función para forzar la visibilidad de hotspots y splash
+			function forceVisibility() {
+				if (visibilityForced) return;
 				
-				if (!isSafari()) return;
-				
-				// Obtener el objeto Krpano
 				var krpano = document.getElementById('krpanoSWFObject');
 				if (!krpano) {
-					console.log('Krpano no encontrado, reintentando...');
-					setTimeout(forceSplashVisibility, 300);
+					setTimeout(forceVisibility, 300);
 					return;
 				}
 				
-				console.log('Forzando visibilidad en Safari');
+				console.log('Forzando visibilidad de hotspots y splash');
 				
-				// 1. SOLO forzar la visibilidad de los hotspots (NO ejecutar startup ni skipintro)
 				try {
 					if (krpano.set) {
-						// Variable global de Panotour para mostrar spots
+						// Forzar visibilidad de spots
 						krpano.set('tour_displayspots', true);
 						
-						// Acciones de Panotour para mostrar spots
+						// Ejecutar acciones de Panotour
 						krpano.call('showpanopointspots');
 						krpano.call('showpanospotsaction');
 						
-						// Forzar visibilidad de plugins de introducción (sin ejecutar acciones)
+						// Forzar que el splash sea visible (si existe)
 						var pluginNames = ['intro', 'splash', 'intro_splash', 'ui_intro', 'intro_plugin', 'splash_plugin'];
 						pluginNames.forEach(function(name) {
 							try {
@@ -408,65 +357,64 @@
 								krpano.set('plugin[' + name + '].enabled', true);
 							} catch(e) {}
 						});
-					}
-				} catch(e) {
-					console.log('No se pudieron forzar hotspots:', e);
-				}
-				
-				// 2. Forzar redimensionamiento para que Krpano se actualice
-				try {
-					if (krpano.stagewidth) {
+						
+						// Asegurar que el layer del splash esté visible
+						try {
+							krpano.set('layer[intro].visible', true);
+							krpano.set('layer[intro].enabled', true);
+							krpano.set('layer[splash].visible', true);
+							krpano.set('layer[splash].enabled', true);
+						} catch(e) {}
+						
+						// Redimensionar Krpano para que todo se ajuste
 						krpano.set('stagewidth', window.innerWidth);
 						krpano.set('stageheight', window.innerHeight);
-					}
-					if (krpano.events && krpano.events.onresize) {
-						krpano.events.onresize();
+						if (krpano.events && krpano.events.onresize) {
+							krpano.events.onresize();
+						}
 					}
 				} catch(e) {
-					console.log('Error en redimensionamiento:', e);
+					console.log('Error forzando visibilidad:', e);
 				}
 				
-				// Marcar como ya ejecutado
-				splashForced = true;
-				console.log('Visibilidad forzada en Safari (sin ejecutar startup)');
+				visibilityForced = true;
+				console.log('Visibilidad forzada correctamente');
 			}
 
-			// Detectar cambio a landscape en Safari
-			function checkOrientationForSafari() {
-				if (!isSafari()) return;
-				if (splashForced) return; // Ya se ejecutó
+			// Detectar cambio a landscape
+			function checkOrientation() {
+				if (visibilityForced) return;
 				
 				var isLandscape = window.innerWidth > window.innerHeight;
 				var wasPortrait = window._wasPortrait;
 				
-				// Si estaba en portrait y ahora está en landscape, forzar visibilidad
 				if (wasPortrait && isLandscape) {
-					console.log('Detectado cambio de portrait a landscape en Safari');
-					// Solo un reintento, no múltiples
-					setTimeout(forceSplashVisibility, 500);
+					console.log('Cambio de portrait a landscape detectado');
+					setTimeout(forceVisibility, 500);
 				}
 				
 				window._wasPortrait = !isLandscape;
 			}
 
-			// Estado inicial - SOLO para Safari
-			if (isSafari()) {
+			// Solo en móviles
+			if (isMobileBrowser()) {
 				window._wasPortrait = window.innerWidth < window.innerHeight;
-				console.log('Safari detectado, modo de corrección activado');
+				console.log('Modo móvil activado, estado inicial: portrait=' + window._wasPortrait);
 				
-				// Escuchar cambios de orientación
 				window.addEventListener('orientationchange', function() {
-					setTimeout(checkOrientationForSafari, 400);
+					setTimeout(checkOrientation, 400);
 				});
 				
-				// También escuchar resize
 				window.addEventListener('resize', function() {
-					setTimeout(checkOrientationForSafari, 300);
+					setTimeout(checkOrientation, 300);
 				});
 				
-				// Ejecutar al cargar (por si ya está en portrait)
-				setTimeout(checkOrientationForSafari, 100);
-				setTimeout(checkOrientationForSafari, 500);
+				setTimeout(checkOrientation, 100);
+				setTimeout(checkOrientation, 500);
+				setTimeout(checkOrientation, 1000);
+				
+				// Forzar visibilidad también al cargar (por si ya está en landscape)
+				setTimeout(forceVisibility, 2000);
 			}
 		</script>
 	</head>
