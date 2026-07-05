@@ -3,6 +3,7 @@
 	<head>
 <title>Museo Palacio de Junco - Generado por Camilo Hdez.</title>
 <meta charset="utf-8" />
+
 <meta property="og:title" content="Museo Palacio de Junco" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cubapano.github.io/junco/index.html" />
@@ -316,106 +317,6 @@
 					window.scrollTo(0, 0);
 				}, 300);
 			});
-		</script>
-		
-		<!-- ===== CAMBIO 5: Solución definitiva - Forzar visibilidad sin reiniciar ===== -->
-		<script type="text/javascript">
-			// Detectar si es un navegador en móvil (iOS o Android)
-			function isMobileBrowser() {
-				return /iphone|ipad|ipod|android|iemobile|mobile/i.test(navigator.userAgent.toLowerCase());
-			}
-
-			// Variable para controlar que solo se ejecute una vez
-			var visibilityForced = false;
-
-			// Función para forzar la visibilidad de hotspots y splash
-			function forceVisibility() {
-				if (visibilityForced) return;
-				
-				var krpano = document.getElementById('krpanoSWFObject');
-				if (!krpano) {
-					setTimeout(forceVisibility, 300);
-					return;
-				}
-				
-				console.log('Forzando visibilidad de hotspots y splash');
-				
-				try {
-					if (krpano.set) {
-						// Forzar visibilidad de spots
-						krpano.set('tour_displayspots', true);
-						
-						// Ejecutar acciones de Panotour
-						krpano.call('showpanopointspots');
-						krpano.call('showpanospotsaction');
-						
-						// Forzar que el splash sea visible (si existe)
-						var pluginNames = ['intro', 'splash', 'intro_splash', 'ui_intro', 'intro_plugin', 'splash_plugin'];
-						pluginNames.forEach(function(name) {
-							try {
-								krpano.set('plugin[' + name + '].visible', true);
-								krpano.set('plugin[' + name + '].enabled', true);
-							} catch(e) {}
-						});
-						
-						// Asegurar que el layer del splash esté visible
-						try {
-							krpano.set('layer[intro].visible', true);
-							krpano.set('layer[intro].enabled', true);
-							krpano.set('layer[splash].visible', true);
-							krpano.set('layer[splash].enabled', true);
-						} catch(e) {}
-						
-						// Redimensionar Krpano para que todo se ajuste
-						krpano.set('stagewidth', window.innerWidth);
-						krpano.set('stageheight', window.innerHeight);
-						if (krpano.events && krpano.events.onresize) {
-							krpano.events.onresize();
-						}
-					}
-				} catch(e) {
-					console.log('Error forzando visibilidad:', e);
-				}
-				
-				visibilityForced = true;
-				console.log('Visibilidad forzada correctamente');
-			}
-
-			// Detectar cambio a landscape
-			function checkOrientation() {
-				if (visibilityForced) return;
-				
-				var isLandscape = window.innerWidth > window.innerHeight;
-				var wasPortrait = window._wasPortrait;
-				
-				if (wasPortrait && isLandscape) {
-					console.log('Cambio de portrait a landscape detectado');
-					setTimeout(forceVisibility, 500);
-				}
-				
-				window._wasPortrait = !isLandscape;
-			}
-
-			// Solo en móviles
-			if (isMobileBrowser()) {
-				window._wasPortrait = window.innerWidth < window.innerHeight;
-				console.log('Modo móvil activado, estado inicial: portrait=' + window._wasPortrait);
-				
-				window.addEventListener('orientationchange', function() {
-					setTimeout(checkOrientation, 400);
-				});
-				
-				window.addEventListener('resize', function() {
-					setTimeout(checkOrientation, 300);
-				});
-				
-				setTimeout(checkOrientation, 100);
-				setTimeout(checkOrientation, 500);
-				setTimeout(checkOrientation, 1000);
-				
-				// Forzar visibilidad también al cargar (por si ya está en landscape)
-				setTimeout(forceVisibility, 2000);
-			}
 		</script>
 	</head>
 	<body>
