@@ -5690,14 +5690,8 @@
 		<option name="area_border_color" value="f2f2f2" type="string" />
 		<option name="area_border_alpha" value="1" type="float" />
 		<option name="padding" value="15" type="int" />
-		<option name="display_title" value="true" type="bool" />
-		<option name="title" value="description1description_title" type="string" />
-		<option name="title_font" value="Verdana" type="string" />
-		<option name="title_size" value="14" type="int" />
-		<option name="title_weight" value="normal" type="string" />
-		<option name="title_decoration" value="normal" type="string" />
-		<option name="title_color" value="000000" type="string" />
-		<option name="close_displayed" value="true" type="bool" />
+		<option name="display_title" value="false" type="bool" />
+		<option name="close_displayed" value="false" type="bool" />
 		<option name="close_text" value="description1display_close_text" type="string" />
 
 		<option name="overlay_displayed" value="false" type="bool" />
@@ -5714,7 +5708,6 @@
 		<option name="close_callback" value="invokeKrFunction('closeKolorAreaCallback_description1')" type="string" />
 		<option name="close_on_click" value="true" type="bool" />
 		<option name="close_onclick_callback" value="invokeKrFunction('closeKolorAreaCallbackClick_description1')" type="string" />
-		<option name="open_callback" value="invokeKrFunction('openKolorAreaCallback_description1')" type="string" />
 		<option name="zorder" value="5" type="int" />
 		<option name="use_i18n" value="true" type="bool" />
 	</settings>
@@ -5725,9 +5718,6 @@
 
 </action>
 
-<action name="updateTitle_description1">
-	js(invokePluginFunction(description1, changeTitle, description1description_title));
-</action>
 
 <action name="openKolorArea_description1">
 	ifnot(ptplugin[description1].isOpen,
@@ -5780,9 +5770,6 @@
 	);
 </action>
 
-<action name="openKolorAreaCallback_description1">
-	updateTitle_description1();
-</action>
 
 <action name="showKolorArea_description1">
 	ifnot(ptplugin[description1].startMethod == "",
@@ -5887,14 +5874,8 @@
 		<option name="area_border_color" value="f2f2f2" type="string" />
 		<option name="area_border_alpha" value="1" type="float" />
 		<option name="padding" value="15" type="int" />
-		<option name="display_title" value="true" type="bool" />
-		<option name="title" value="description2description_title" type="string" />
-		<option name="title_font" value="Verdana" type="string" />
-		<option name="title_size" value="14" type="int" />
-		<option name="title_weight" value="normal" type="string" />
-		<option name="title_decoration" value="normal" type="string" />
-		<option name="title_color" value="000000" type="string" />
-		<option name="close_displayed" value="true" type="bool" />
+		<option name="display_title" value="false" type="bool" />
+		<option name="close_displayed" value="false" type="bool" />
 		<option name="close_text" value="description2display_close_text" type="string" />
 
 		<option name="overlay_displayed" value="false" type="bool" />
@@ -5911,7 +5892,6 @@
 		<option name="close_callback" value="invokeKrFunction('closeKolorAreaCallback_description2')" type="string" />
 		<option name="close_on_click" value="true" type="bool" />
 		<option name="close_onclick_callback" value="invokeKrFunction('closeKolorAreaCallbackClick_description2')" type="string" />
-		<option name="open_callback" value="invokeKrFunction('openKolorAreaCallback_description2')" type="string" />
 		<option name="zorder" value="6" type="int" />
 		<option name="use_i18n" value="true" type="bool" />
 	</settings>
@@ -5922,9 +5902,6 @@
 
 </action>
 
-<action name="updateTitle_description2">
-	js(invokePluginFunction(description2, changeTitle, description2description_title));
-</action>
 
 <action name="openKolorArea_description2">
 	ifnot(ptplugin[description2].isOpen,
@@ -5977,9 +5954,6 @@
 	);
 </action>
 
-<action name="openKolorAreaCallback_description2">
-	updateTitle_description2();
-</action>
 
 <action name="showKolorArea_description2">
 	ifnot(ptplugin[description2].startMethod == "",
@@ -8573,10 +8547,22 @@ playsound3Dwhenpossible(soundcallActionsOnTourEvents1, %$videos_sounds_path%/sou
 
 
   </action>
-  <!-- Tour Information -->
-  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
-  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
 
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
 
 <action name="setViewArchitectural">
 	if(normalViewActivated,stopSetViewTweens(););
@@ -8597,23 +8583,6 @@ playsound3Dwhenpossible(soundcallActionsOnTourEvents1, %$videos_sounds_path%/sou
 	);
 	tween(view.fov, get(panoview.fov), distance(50, 0.45));
 </action>
-
-  <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
-  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
-
-  
-  <events name="krpanoExitFullscreenEvent"
-    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
-    keep="true" />
-
-  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
-  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
-  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
-  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
-  
-  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
 
   <!-- Sounds Management -->
   <plugin name="soundinterface"
@@ -9092,5 +9061,10 @@ playsound3Dwhenpossible(soundcallActionsOnTourEvents1, %$videos_sounds_path%/sou
       );
     );
   </action>
+
+  <!-- Tour Information -->
+  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
+  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
+
 
 </krpano>
