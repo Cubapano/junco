@@ -67,20 +67,26 @@
 				box-sizing: border-box;
 			}
 			#rotate-overlay .icon-rotate {
-				font-size: 64px;
+				font-size: 72px;
 				margin-bottom: 20px;
 				display: block;
+				animation: rotate-icon 2s linear infinite;
+			}
+			@keyframes rotate-icon {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
 			}
 			#rotate-overlay .rotate-text {
-				font-size: 20px;
-				max-width: 300px;
+				font-size: 22px;
+				max-width: 320px;
 				line-height: 1.5;
 			}
 			#rotate-overlay .rotate-sub {
-				font-size: 14px;
+				font-size: 15px;
 				color: #aaaaaa;
 				margin-top: 10px;
 			}
+
 			/* Mostrar solo en móviles en portrait */
 			@media only screen and (max-width: 1024px) and (orientation: portrait) {
 				#rotate-overlay {
@@ -254,7 +260,7 @@
 
 			<!-- ===== SPLASH / ORIENTATION OVERLAY ===== -->
 			<div id="rotate-overlay">
-				<span class="icon-rotate">🔄</span>
+				<span class="icon-rotate">📱</span>
 				<span class="rotate-text">Por favor, gira tu dispositivo<br>a <strong>modo horizontal</strong></span>
 				<span class="rotate-sub">para disfrutar del tour virtual</span>
 			</div>
@@ -279,5 +285,39 @@
 				</script>
 			</div>
 		</div>
+
+		<!-- ===== ORIENTATION FORCE - JAVASCRIPT FALLBACK ===== -->
+		<script>
+			(function() {
+				function checkOrientation() {
+					var overlay = document.getElementById('rotate-overlay');
+					var tour = document.getElementById('tourDIV');
+					if (!overlay || !tour) return;
+
+					var isMobile = window.innerWidth <= 1024;
+					var isPortrait = window.innerHeight > window.innerWidth;
+
+					if (isMobile && isPortrait) {
+						overlay.style.display = 'flex';
+						tour.style.display = 'none';
+					} else {
+						overlay.style.display = 'none';
+						tour.style.display = 'block';
+					}
+				}
+
+				// Comprobar al cargar, al redimensionar y al cambiar orientación
+				window.addEventListener('load', checkOrientation);
+				window.addEventListener('resize', checkOrientation);
+				window.addEventListener('orientationchange', function() {
+					setTimeout(checkOrientation, 300);
+				});
+
+				// Comprobación inicial por si el DOM no está listo
+				setTimeout(checkOrientation, 100);
+			})();
+		</script>
+		<!-- ===== FIN ORIENTATION FORCE - JAVASCRIPT FALLBACK ===== -->
+
 	</body>
 </html>
