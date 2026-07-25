@@ -10,7 +10,7 @@
 <meta property="og:image" content="https://cubapano.github.io/junco/indexdata/thumbnail.jpg" />
 <meta property="og:description" content="Tour virtual por la que fuera la morada de la familia Vicente del Junco y Sardiñas, convertida en Museo Provincial de Matanzas en 1980." />
 
-<meta name="description" content="Tour virtual por la que fuera la morada de la familia Vicente del Junco y Sardiñas, convertida en Museo Provincial de Matanzas en 1980." />
+<meta name="description" content="&lt;font face="verdana, sans-serif"&gt;Construido en 1838 fue la morada de la familia Vicente del Junco y Sardiñas, convertida en museo provincial en 1980.&lt;/font&gt;" />
 <meta name="keywords" content="Museo Palacio de Junco" />
 <meta name="medium" content="mult" />
 <meta name="video_height" content="480"></meta>
@@ -47,76 +47,66 @@
 				user-select: none;
 			}
 
-			/* ===== ORIENTATION FORCE - LANDSCAPE ===== */
-			#rotate-overlay {
+			/* --- ESTILOS PARA EL OVERLAY DE ORIENTACIÓN --- */
+			#orientacion-overlay {
 				position: fixed;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: #000000;
-				z-index: 99999;
+				background: rgba(0,0,0,0.85);
+				color: white;
 				display: none;
 				justify-content: center;
 				align-items: center;
-				flex-direction: column;
-				color: #ffffff;
+				z-index: 9999;
 				font-family: Arial, Helvetica, sans-serif;
 				text-align: center;
+				flex-direction: column;
 				padding: 20px;
 				box-sizing: border-box;
+				pointer-events: auto;
 			}
-			#rotate-overlay .icon-rotate {
-				font-size: 72px;
+			#orientacion-overlay .mensaje {
+				max-width: 400px;
+			}
+			#orientacion-overlay .icono {
+				font-size: 64px;
 				margin-bottom: 20px;
 				display: block;
-				animation: rotate-icon 2s linear infinite;
 			}
-			@keyframes rotate-icon {
-				0% { transform: rotate(0deg); }
-				100% { transform: rotate(360deg); }
-			}
-			#rotate-overlay .rotate-text {
+			#orientacion-overlay h2 {
 				font-size: 22px;
-				max-width: 320px;
+				margin-bottom: 12px;
+				font-weight: normal;
+			}
+			#orientacion-overlay p {
+				font-size: 16px;
 				line-height: 1.5;
+				opacity: 0.8;
 			}
-			#rotate-overlay .rotate-sub {
-				font-size: 15px;
-				color: #aaaaaa;
-				margin-top: 10px;
+			#orientacion-overlay .btn-cerrar {
+				margin-top: 30px;
+				padding: 12px 30px;
+				background: #444;
+				color: white;
+				border: none;
+				border-radius: 30px;
+				font-size: 16px;
+				cursor: pointer;
+				transition: background 0.2s;
 			}
-
-			/* Mostrar solo en móviles en portrait */
-			@media only screen and (max-width: 1024px) and (orientation: portrait) {
-				#rotate-overlay {
-					display: flex !important;
-				}
-				#tourDIV {
+			#orientacion-overlay .btn-cerrar:hover {
+				background: #666;
+			}
+			@media (orientation: landscape) {
+				#orientacion-overlay {
 					display: none !important;
 				}
 			}
-			/* Ocultar en landscape o en pantallas grandes */
-			@media only screen and (orientation: landscape) {
-				#rotate-overlay {
-					display: none !important;
-				}
-				#tourDIV {
-					display: block !important;
-				}
-			}
-			@media only screen and (min-width: 1025px) {
-				#rotate-overlay {
-					display: none !important;
-				}
-				#tourDIV {
-					display: block !important;
-				}
-			}
-			/* ===== FIN ORIENTATION FORCE ===== */
-
 		</style>
-				<!--[if !IE]><!-->
+
+		<!--[if !IE]><!-->
 		<script type="text/javascript" src="indexdata/lib/jquery-2.1.1.min.js"></script>
 		<!--<![endif]-->
 		<!--[if lte IE 8]>
@@ -253,18 +243,52 @@
 				}
 				return false;
 			}
+
+			// --- FUNCIONES PARA EL OVERLAY DE ORIENTACIÓN ---
+			function mostrarAvisoOrientacion() {
+				var overlay = document.getElementById('orientacion-overlay');
+				if (overlay) {
+					// Solo mostrar en móviles y si está en vertical
+					var esMovil = /(iphone|ipod|ipad|android|iemobile|webos|fennec|blackberry|kindle|series60|playbook|opera\smini|opera\smobi|opera\stablet|symbianos|palmsource|palmos|blazer|windows\sce|windows\sphone|wp7|bolt|doris|dorothy|gobrowser|iris|maemo|minimo|netfront|semc-browser|skyfire|teashark|teleca|uzardweb|avantgo|docomo|kddi|ddipocket|polaris|eudoraweb|opwv|plink|plucker|pie|xiino|benq|playbook|bb|cricket|dell|bb10|nintendo|up.browser|playstation|tear|mib|obigo|midp|mobile|tablet)/i.test(navigator.userAgent);
+					if (esMovil && window.innerHeight > window.innerWidth) {
+						overlay.style.display = 'flex';
+					} else {
+						overlay.style.display = 'none';
+					}
+				}
+			}
+
+			function ocultarAvisoOrientacion() {
+				var overlay = document.getElementById('orientacion-overlay');
+				if (overlay) {
+					overlay.style.display = 'none';
+				}
+			}
+
+			// Escuchar cambios de orientación
+			if (window.addEventListener) {
+				window.addEventListener('resize', mostrarAvisoOrientacion);
+				window.addEventListener('orientationchange', function() {
+					setTimeout(mostrarAvisoOrientacion, 300);
+				});
+				window.addEventListener('load', function() {
+					setTimeout(mostrarAvisoOrientacion, 500);
+				});
+			}
 		</script>
 	</head>
 	<body>
-		<div id="container">
-
-			<!-- ===== SPLASH / ORIENTATION OVERLAY ===== -->
-			<div id="rotate-overlay">
-				<span class="icon-rotate">📱</span>
-				<span class="rotate-text">Por favor, gira tu dispositivo<br>a <strong>modo horizontal</strong></span>
-				<span class="rotate-sub">para disfrutar del tour virtual</span>
+		<!-- OVERLAY DE ORIENTACIÓN -->
+		<div id="orientacion-overlay">
+			<div class="mensaje">
+				<span class="icono">📱↻</span>
+				<h2>Gira tu dispositivo</h2>
+				<p>Para una mejor experiencia, visualiza este tour virtual en <strong>modo horizontal</strong>.</p>
+				<button class="btn-cerrar" onclick="ocultarAvisoOrientacion()">Continuar en vertical</button>
 			</div>
-			<!-- ===== FIN SPLASH / ORIENTATION OVERLAY ===== -->
+		</div>
+
+		<div id="container">
 
 			<div id="tourDIV">
 				<div id="panoDIV">
@@ -285,39 +309,5 @@
 				</script>
 			</div>
 		</div>
-
-		<!-- ===== ORIENTATION FORCE - JAVASCRIPT FALLBACK (CORREGIDO) ===== -->
-		<script>
-			(function() {
-				function checkOrientation() {
-					var overlay = document.getElementById('rotate-overlay');
-					var tour = document.getElementById('tourDIV');
-					if (!overlay || !tour) return;
-
-					var isMobile = window.innerWidth <= 1024;
-					var isPortrait = window.innerHeight > window.innerWidth;
-
-					if (isMobile && isPortrait) {
-						overlay.style.display = 'flex';
-						tour.style.display = 'none';
-					} else {
-						overlay.style.display = 'none';
-						tour.style.display = 'block';
-					}
-				}
-
-				// Comprobar al cargar, al redimensionar y al cambiar orientación
-				window.addEventListener('load', checkOrientation);
-				window.addEventListener('resize', checkOrientation);
-				window.addEventListener('orientationchange', function() {
-					setTimeout(checkOrientation, 300);
-				});
-
-				// Comprobación inicial por si el DOM no está listo
-				setTimeout(checkOrientation, 100);
-			})();
-		</script>
-		<!-- ===== FIN ORIENTATION FORCE - JAVASCRIPT FALLBACK ===== -->
-
 	</body>
 </html>
