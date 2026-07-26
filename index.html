@@ -392,7 +392,7 @@
 
 				<script type="text/javascript" src="indexdata/index.js"></script>
 				
-				<!-- ===== NUEVA SOLUCIÓN: Cargar el tour SOLO en horizontal ===== -->
+				<!-- ===== NUEVA SOLUCIÓN: Cargar el tour SOLO en horizontal (sin recargar en medio del recorrido) ===== -->
 				<script type="text/javascript">
 					// Variable para controlar si el tour ya se ha cargado
 					var tourCargado = false;
@@ -418,16 +418,20 @@
 
 						if (esMovil) {
 							if (window.innerWidth > window.innerHeight) {
-								// Está en horizontal → cargar tour
-								cargarTour();
+								// Está en horizontal
+								if (!tourCargado) {
+									// Si el tour NO se ha cargado aún, lo cargamos (caso: abrió en vertical y giró)
+									cargarTour();
+								} else {
+									// Si el tour YA está cargado, simplemente mostramos el tour y ocultamos el mensaje
+									document.getElementById('rotateMessage').style.display = 'none';
+									document.getElementById('tourDIV').style.display = 'block';
+								}
 							} else {
-								// Está en vertical → mostrar mensaje y ocultar tour
+								// Está en vertical → mostrar mensaje y ocultar tour (sin recargar)
 								document.getElementById('rotateMessage').style.display = 'flex';
 								document.getElementById('tourDIV').style.display = 'none';
-								// Si el tour ya se había cargado, recargamos la página para reiniciar
-								if (tourCargado) {
-									location.reload();
-								}
+								// NO recargamos la página, solo ocultamos el tour
 							}
 						} else {
 							// No es móvil → cargar tour directamente
