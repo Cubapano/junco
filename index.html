@@ -391,12 +391,65 @@
 				</div>
 
 				<script type="text/javascript" src="indexdata/index.js"></script>
+				
+				<!-- ===== NUEVA SOLUCIÓN: Cargar el tour SOLO en horizontal ===== -->
 				<script type="text/javascript">
-					if (isVRModeRequested()){
-						accessWebVr();
-					}else{
-						accessStdVr();
+					// Variable para controlar si el tour ya se ha cargado
+					var tourCargado = false;
+
+					// Función que carga el tour (solo se ejecuta en horizontal)
+					function cargarTour() {
+						if (!tourCargado && window.innerWidth > window.innerHeight) {
+							tourCargado = true;
+							if (isVRModeRequested()){
+								accessWebVr();
+							}else{
+								accessStdVr();
+							}
+							// Ocultar el mensaje de rotación si está visible
+							document.getElementById('rotateMessage').style.display = 'none';
+							document.getElementById('tourDIV').style.display = 'block';
+						}
 					}
+
+					// Función que verifica la orientación y carga o muestra mensaje
+					function verificarOrientacion() {
+						var esMovil = /(iphone|ipod|ipad|android|iemobile|webos|fennec|blackberry|kindle|series60|playbook|opera\smini|opera\smobi|opera\stablet|symbianos|palmsource|palmos|blazer|windows\sce|windows\sphone|wp7|bolt|doris|dorothy|gobrowser|iris|maemo|minimo|netfront|semc-browser|skyfire|teashark|teleca|uzardweb|avantgo|docomo|kddi|ddipocket|polaris|eudoraweb|opwv|plink|plucker|pie|xiino|benq|playbook|bb|cricket|dell|bb10|nintendo|up.browser|playstation|tear|mib|obigo|midp|mobile|tablet)/i.test(navigator.userAgent);
+
+						if (esMovil) {
+							if (window.innerWidth > window.innerHeight) {
+								// Está en horizontal → cargar tour
+								cargarTour();
+							} else {
+								// Está en vertical → mostrar mensaje y ocultar tour
+								document.getElementById('rotateMessage').style.display = 'flex';
+								document.getElementById('tourDIV').style.display = 'none';
+								// Si el tour ya se había cargado, recargamos la página para reiniciar
+								if (tourCargado) {
+									location.reload();
+								}
+							}
+						} else {
+							// No es móvil → cargar tour directamente
+							cargarTour();
+						}
+					}
+
+					// Ejecutar al cargar la página
+					window.addEventListener('load', function() {
+						// Pequeño retraso para asegurar que todo está listo
+						setTimeout(verificarOrientacion, 200);
+					});
+
+					// Escuchar cambios de orientación
+					window.addEventListener('orientationchange', function() {
+						setTimeout(verificarOrientacion, 400);
+					});
+
+					// Escuchar cambios de tamaño (por si acaso)
+					window.addEventListener('resize', function() {
+						setTimeout(verificarOrientacion, 300);
+					});
 				</script>
 			</div>
 		</div>
